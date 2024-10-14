@@ -19,7 +19,7 @@
             height: 50px;
             border: 5px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
-            border-top: 5px solid #28a745;
+            border-top: 5px solid #4F46E5; /* Indigo */
             animation: spin 1s linear infinite;
             margin-top: 20px;
         }
@@ -44,13 +44,13 @@
         }
     </style>
 </head>
-<body class="font-sans bg-gray-100 p-8 flex flex-col items-center">
+<body class="font-sans bg-gray-50 p-8 flex flex-col items-center">
 
     <div class="popup-animation max-w-lg w-full bg-white shadow-lg rounded-lg p-6">
-        <h1 class="text-3xl font-bold mb-6 text-center">Video Downloader</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center text-indigo-600">Video Downloader</h1>
         <form id="downloadForm" class="flex items-center mb-6">
-            <input type="text" id="url" placeholder="Enter video URL" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-            <button type="submit" class="ml-4 px-5 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none">Download</button>
+            <input type="text" id="url" placeholder="Enter video URL" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button type="submit" class="ml-4 px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none">Download</button>
         </form>
         <div id="spinner" class="mx-auto"></div>
         <div id="result" class="mt-4"></div>
@@ -98,11 +98,11 @@
                     videoPlayer.src = data.video_url;
                     videoPreview.classList.remove('hidden');
                 } else {
-                    responseElement.innerHTML = `<p>Error: ${data.error}</p>`;
+                    responseElement.innerHTML = `<p class="text-red-500">Error: ${data.error}</p>`;
                 }
             } catch (error) {
                 spinner.style.display = 'none';
-                responseElement.innerHTML = `<p>Error: Unable to fetch video.</p>`;
+                responseElement.innerHTML = `<p class="text-red-500">Error: Unable to fetch video.</p>`;
             }
         });
 
