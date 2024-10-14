@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Downloader</title>
+    <title>𝐓𝐈𝐊𝐓𝐎𝐊 𝐕𝐈𝐃𝐄𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 𝐇𝐃 𝐁𝐘 𝐙𝐂𝐃𝐒 𝐏𝐇</title>
+      <link rel="icon" type="image/png" href="https://i.ibb.co/v1ZTP2h/tiktik.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes popUp {
@@ -19,7 +20,7 @@
             height: 50px;
             border: 5px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            border-top: 5px solid #3B82F6; /* Blue */
+            border-top: 5px solid #3B82F6; 
             animation: spin 1s linear infinite;
             margin-top: 20px;
         }
@@ -47,9 +48,9 @@
 <body class="font-sans bg-gray-900 text-white p-8 flex flex-col items-center">
 
     <div class="popup-animation max-w-lg w-full bg-gray-800 shadow-lg rounded-lg p-6">
-        <h1 class="text-3xl font-bold mb-6 text-center text-blue-400">Video Downloader</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-400">𝐓𝐈𝐊𝐃𝐋 𝐇𝐃 𝐁𝐘 𝐙𝐂𝐃𝐒 𝐏𝐇</h1>
         <form id="downloadForm" class="flex items-center mb-6">
-            <input type="text" id="url" placeholder="Enter video URL" required class="w-full p-3 border border-gray-700 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" id="url" placeholder="𝖤𝖭𝖳𝖤𝖱 𝖳𝖨𝖪𝖳𝖮𝖪 𝖵𝖨𝖣 𝖴𝖱𝖫" required class="w-full p-3 border border-gray-700 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             <button type="submit" class="ml-4 px-5 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none">Download</button>
         </form>
         <div id="spinner" class="mx-auto"></div>
@@ -58,7 +59,7 @@
 
     <div id="videoPreview" class="popup-animation mt-8 hidden relative max-w-lg w-full bg-gray-800 shadow-lg rounded-lg p-6">
         <video id="videoPlayer" controls class="w-full rounded-lg bg-black"></video>
-        <div class="watermark">TikDL CC</div>
+        <div class="watermark">𝐙𝐂𝐃𝐒 𝐏𝐇 𝐏𝐑𝐄𝐌 𝐖𝐄𝐁</div>
     </div>
 
     <script>
@@ -91,8 +92,7 @@
                         <p><strong>Views:</strong> ${data.view_count}</p>
                         <p><strong>Downloads:</strong> ${data.download_count}</p>
                         <p><strong>Duration:</strong> ${data.duration} seconds</p>
-                        <button onclick="window.location.href='/api/download?url=${encodeURIComponent(url)}'" class="mt-4 px-5 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none">Go to API</button>
-                        <button onclick="downloadVideo('${data.video_url}', 'ccprojectstikdl-${title}-${timestamp}.mp4')" class="mt-4 inline-block px-5 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none">Download Video</button>
+                        <button onclick="downloadVideo('${data.video_url}', 'ZCDSPH-${title}-${timestamp}.mp4')" class="mt-4 inline-block px-5 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none">𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖵𝖨𝖣𝖤𝖮</button>
                     `;
 
                     videoPlayer.src = data.video_url;
